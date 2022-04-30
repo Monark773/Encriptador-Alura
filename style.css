@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(210, 195, 214);
+}
+.caja{
+    position: relative;
+    width: 100px;
+    height: 70px;
+}
+.logo-box{
+    justify-content: left;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100px;
+    position: absolute;
+    left: 110px;
+    animation: etiqueta 4s forwards;
+    animation-delay: 2s;
+}
+
+.logo-box img{
+    padding: 6px;
+}
+@keyframes etiqueta{
+    0% {transform: translateX(0); opacity: 1;}
+    20% {transform: translateX(-110px); opacity: 1;}
+    80%{transform: translateX(-110px); opacity: 1;}
+    99%{transform: translateX(0); opacity: 1;}
+    100%{transform: translateX(0); opacity: 0;}
+}
+.container {
+    display: flex;
+    width: 600px;
+    height: 700px;
+    margin-top: 90px;
+    position: relative;
+    perspective: 2500px;
+    background-color: rgb(210, 195, 214);
+    
+}
+  
+.rotar{
+ transform: rotateY(180deg);
+}
+  
+/* por delante */  
+.tarjeta {
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.textContainer {
+    display: block;
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    border:none;
+    resize: none;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.textArea-box{
+    height: 600px;
+}
+
+#textArea::placeholder{
+  color: rgb(255, 255, 255);  
+}
+
+.textArea-box p{
+    text-align: center;
+    font-size: large;
+    padding-top: 30px;
+}
+
+#textArea{
+    margin-left: 29px;
+    margin-top: 30px;
+    width: 90%;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border:none;
+    resize: none;
+    text-align: center;
+    font-size:xx-large;
+    background-color: rgb(210, 195, 214);
+    color: white;
+    box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#textArea:focus{
+    outline: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+::selection{
+    color: white;
+    background-color: #c796f8;
+}
+/*boton encriptar y desencriptar*/
+
+.button{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+}
+  
+.button::after{
+    content: "";
+    background-color: #dcbaff;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+  
+.button:hover::after{
+    top: 0px;
+    left: 0px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* por detrás */
+
+.textContainer.resultado {
+    transform: rotateY(180deg);
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+#nohaymensaje{
+    display: block;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.textContainer.resultado p{
+    margin-top: 40px;
+    margin-left: 50px;
+    text-align: center;
+    font-size: xx-large;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 80%;
+    height: 50%;
+}
+
+.bodyAtras{
+    background-color: rgb(210, 195, 214);
+}
+
+.containerAtras{
+    background-color: rgb(210, 195, 214);
+}
+
+/* botón copiar*/
+
+.buttonsAtras{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonAtras{
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+}
+  
+.buttonAtras::after{
+    content: "";
+    background-color:#dcbaff;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+
+  
+.buttonAtras:hover::after{
+    top: 0px;
+    left: 0px;
+}

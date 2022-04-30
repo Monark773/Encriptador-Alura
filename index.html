@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+    <title>Document</title>
+</head>
+<body id="body" class="body">
+    
+    <div class="caja">
+        <div class="logo-box">
+            <img src="/assets/logo-aluraespanhol.svg" alt="">
+        </div>
+    </div>
+
+    <div class="container" id="container">
+        <div class="tarjeta" id="tarjeta">
+            <div class="textContainer"> 
+               
+                <div class="textArea-box">
+                   <textarea name="textArea" id="textArea" placeholder="Escribí algo acá"></textarea>
+                   <p>sólo minúsculas y sin acentos</p>
+               </div>
+               
+               <div class="buttons">
+                    <button class="button" id="encriptar">encriptar</button>
+                    <button class="button" id="desencriptar">desencriptar</button>
+                </div>
+               
+            </div>
+
+
+            <div class="textContainer resultado"> 
+                <p id="message">
+
+                </p>
+                <div class="buttonsAtras">
+                    <div class="copiar">
+                        <button class="buttonAtras" id="copiar">copiar</button>
+                    </div>
+                    <div class="volver">
+                        <button class=" buttonAtras" id="volver">volver</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
